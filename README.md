@@ -4,7 +4,7 @@ A standalone web app for analyzing Discord mutual-data exports through a weighte
 
 ## Example
 
-![Example server relationship graph](docs/sample-graph.jpg)
+<img src="docs/sample-graph.png" alt="Example server relationship graph" width="100%">
 
 Example visualization generated from an imported mutual-data set.
 
