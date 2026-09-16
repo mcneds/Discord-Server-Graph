@@ -2,6 +2,11 @@
 
 A standalone web app for analyzing Discord mutual-data exports through a weighted server graph, server insights, and user rankings.
 
+## Example
+
+![Example server relationship graph](docs/sample-graph.jpg)
+
+Example visualization generated from an imported mutual-data set.
 
 ## Features
 
