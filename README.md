@@ -2,6 +2,7 @@
 
 A standalone web app for analyzing Discord mutual-data exports through a weighted server graph, server insights, and user rankings.
 
+
 ## Features
 
 - Imports Discord server/member export data using the `servers[].members[]` structure
