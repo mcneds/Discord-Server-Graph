@@ -1,0 +1,9 @@
+﻿node_modules
+dist
+playwright-report
+test-results
+.DS_Store
+
+node_modules/
+
+node_modules_broken_*/

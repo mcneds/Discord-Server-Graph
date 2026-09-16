@@ -1,0 +1,44 @@
+{
+  "name": "mutual-data-graph-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:drive-mirror": "powershell -ExecutionPolicy Bypass -File ./scripts/dev-from-cache.ps1",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "npx playwright test",
+    "sync:to:cache": "powershell -ExecutionPolicy Bypass -File ./scripts/sync-mirror.ps1 -Direction drive-to-cache",
+    "sync:to:drive": "powershell -ExecutionPolicy Bypass -File ./scripts/sync-mirror.ps1 -Direction cache-to-drive",
+    "cf:dev": "npm run build && npx wrangler pages dev dist --compatibility-date=2026-03-07",
+    "cf:deploy": "npm run build && npx wrangler pages deploy dist",
+    "db:migrate:local": "npx wrangler d1 migrations apply MUTUAL_GRAPH_DB --local",
+    "db:migrate:remote": "npx wrangler d1 migrations apply MUTUAL_GRAPH_DB"
+  },
+  "dependencies": {
+    "graphology": "^0.26.0",
+    "graphology-layout": "^0.6.1",
+    "graphology-layout-forceatlas2": "^0.10.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sigma": "^2.4.0",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^15.0.7",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.3.1",
+    "jsdom": "^24.1.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.4.10",
+    "vitest": "^1.6.0"
+  }
+}
